@@ -1,9 +1,7 @@
 import * as React from "react";
 import { cn } from "../../lib/utils";
 
-interface CardProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export const Card: React.FC<CardProps> = ({ className, children, ...props }) => {
+export const Card: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ className, children, ...props }) => {
   return (
     <div className={cn("rounded-lg border bg-white p-6 shadow-sm", className)} {...props}>
       {children}
@@ -11,9 +9,7 @@ export const Card: React.FC<CardProps> = ({ className, children, ...props }) => 
   );
 };
 
-interface CardHeaderProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export const CardHeader: React.FC<CardHeaderProps> = ({ className, children, ...props }) => {
+export const CardHeader: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ className, children, ...props }) => {
   return (
     <div className={cn("mb-4 border-b pb-2", className)} {...props}>
       {children}
@@ -21,9 +17,7 @@ export const CardHeader: React.FC<CardHeaderProps> = ({ className, children, ...
   );
 };
 
-interface CardContentProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export const CardContent: React.FC<CardContentProps> = ({ className, children, ...props }) => {
+export const CardContent: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ className, children, ...props }) => {
   return (
     <div className={cn("text-gray-700", className)} {...props}>
       {children}
@@ -31,9 +25,7 @@ export const CardContent: React.FC<CardContentProps> = ({ className, children, .
   );
 };
 
-interface CardTitleProps extends React.HTMLAttributes<HTMLHeadingElement> {}
-
-export const CardTitle: React.FC<CardTitleProps> = ({ className, children, ...props }) => {
+export const CardTitle: React.FC<React.HTMLAttributes<HTMLHeadingElement>> = ({ className, children, ...props }) => {
   return (
     <h2 className={cn("text-xl font-semibold", className)} {...props}>
       {children}

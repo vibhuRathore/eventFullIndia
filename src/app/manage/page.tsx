@@ -20,7 +20,7 @@ const mockSubmissions: ArtistSubmission[] = [
 ];
 
 export default function ManagerDashboard() {
-  const [submissions, setSubmissions] = useState<ArtistSubmission[]>(mockSubmissions);
+  const [submissions] = useState<ArtistSubmission[]>(mockSubmissions);
 
   const handleAction = (index: number) => {
     alert(`Action triggered for: ${submissions[index].name}`);
